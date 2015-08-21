@@ -1,0 +1,211 @@
+/* ----------------- header
+----------------------------------------------------------------------- */
+
+.header {
+	@include float-primary;	
+	background: $header-bg;
+	position: relative;
+	padding: 15px 0;
+	.wrapper {
+		position: relative;
+		@include breakpoint("mobile") {
+			margin: 0 10px;
+		}
+		.logo {
+			float: left;
+			padding: 0 40px 0 10px;
+		}
+		.main-nav {
+			float: left;
+			padding: 0 0 0 35px;
+			border-left: 1px solid $boreder-color;
+			@include breakpoint(mobile) {
+				position: absolute;
+				top: 53px;
+				width: 100%;
+				left: 0;
+				background: #404040;
+				z-index: 10000;
+				opacity: 0.9;
+				display: none;
+				padding: 0;
+			}
+			ul {
+				@include float-primary;
+				@include breakpoint(mobile) {
+					text-align: center;
+				}
+				li {
+					float: left;
+					position: relative;
+					@include breakpoint(mobile) {
+						text-align: center;
+						display: block;
+						width: 100%;
+					}
+					&:hover > ul {
+						max-height: 999px;
+						display: block;
+					}
+					.sub-menu {
+						position: absolute;
+						top: 37px;
+						width: 150px;
+						left: 0;
+						max-height: 0;
+						overflow: hidden;
+						transition: max-height 800ms ease-in-out;
+						padding-top: 16px;
+						z-index: 2000000000000;
+						@include breakpoint(mobile) {
+							position: relative;
+							top: 0px;
+							width: 100%;
+							left: 0;
+							padding-top: 0;
+						}
+						li {
+							width: 100%;
+							border-bottom: 1px solid $boreder-color;
+							&:last-child {
+								border-bottom: none;
+							}
+							a {
+								display: block;
+								color: #fff;
+								background: #222;
+								padding: 0 0 0 10px;
+								font-size: 14px;
+								font-family: 'Lato', sans-serif;
+								&:hover {
+									background: $hover-color;
+									transition: color 0.5s ease-out;
+								}
+								@include breakpoint(mobile) {
+									padding: 0;
+								}
+							}
+						}
+					}
+				}
+				a {
+					text-decoration: none;
+					display: block;
+					line-height: 35px;
+					height: 35px;
+					color: $main-nav-color;
+					font-family: 'Lato', sans-serif;
+					padding: 0 20px 0 10px;
+					background: #333;
+					&:hover {
+						color: $hover-color;
+						transition: color 0.5s ease-out;
+					}
+				}
+			}
+		}
+		.social {
+			float: right;
+			padding: 0 5px 0 0;
+			@include breakpoint("mobile") {
+				display: none;
+			}
+			li {
+				float: left;
+				padding: 0 0 0 5px;
+				a {
+					.facebook {
+						@include sprite-css(facebook);
+						&:hover {
+							@include sprite-css(facebook_hover);
+						}
+					}
+					.twetter {
+						@include sprite-css(twetter);
+						&:hover {
+							@include sprite-css(twetter_hover);	
+						}
+					}
+					.google {
+						@include sprite-css(google);
+						&:hover {
+							@include sprite-css(google_hover);	
+						}
+					}
+				}
+			}
+		}
+		.mobile-toggle {
+			float: right;
+			display: none;
+			@include breakpoint("mobile") {
+				display: inline-block;
+			}
+			.menu-toggle {
+				float: right;
+				line-height: 35px;
+				font-size: 35px;
+				color: #fff;
+				text-decoration: none;
+				padding: 0 5px 0 5px;
+				&:hover {
+					color: $hover-color;
+				}		
+			}
+		}
+
+ 	 	.search-container {
+			width: 15%;
+		  	display: inline-block;
+		  	float: right;
+			@include breakpoint("mobile") {
+				width: 40%;
+			}
+			.searchbox {
+				position:relative;
+				min-width: 35px;
+				width: 0%;
+				height: 35px;
+				float: right;
+				overflow: hidden;
+				transition: width 0.2s linear;
+				.searchbox-input {
+					position: absolute;
+					top: 0;
+					right: 0;
+					border: 0;
+					outline: 0;
+					background: #dcddd8;
+					width: 100%;
+					height: 35px;
+					margin: 0;
+					padding-left: 10px;
+					font-size: 14px;
+					color: #172b3c;
+				}
+				.searchbox-input::-webkit-input-placeholder {
+					color: $header-bg;
+				}
+
+				.searchbox-icon,
+				.searchbox-submit {
+				    position: absolute;
+					top: 0;
+					right: 0;
+					padding: 0;
+					margin: 0;
+					border: 0;
+					outline: 0;
+					cursor: pointer;
+					@include sprite-css(searchbox-icon);
+						&:hover {
+						@include sprite-css(searchbox-icon_hover);	
+					}	
+				}
+			}
+			.searchbox-open {
+				width: 100%;
+			}
+		}
+	}
+}

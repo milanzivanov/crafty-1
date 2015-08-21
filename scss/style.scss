@@ -1,0 +1,350 @@
+/* ----------------- Libraries
+----------------------------------------------------------------------- */
+
+@import "compass"; 
+@import "config/reset";
+@import "config/variables";
+   
+/* ----------------- Helpers
+----------------------------------------------------------------------- */
+
+@import "helpers/mixins";
+@import "helpers/helpers";
+@import "helpers/ie";
+
+/* ----------------- Base
+----------------------------------------------------------------------- */
+
+@import "base/layout";
+@import "base/typography";
+
+/* ----------------- Layout
+----------------------------------------------------------------------- */
+
+/* ----------------- Lib
+----------------------------------------------------------------------- */
+
+/* ----------------- Layout
+----------------------------------------------------------------------- */
+
+@import "layout/buttons";
+@import "layout/forms";
+@import "layout/icons";
+
+/* ----------------- Partials
+----------------------------------------------------------------------- */
+
+@import "partials/footer";
+@import "partials/header";
+
+
+/* ----------------- Main scss
+----------------------------------------------------------------------- */
+
+.banner {
+	@include float-primary;
+	position: relative;
+	picture {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.wrapper {
+		position: absolute;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		.text-slider {
+			width: 100%;
+			right: 0;
+			display: flex;
+    		flex-direction: column;
+		    justify-content: center;
+			@include centre("both");
+			@include breakpoint("mobile") {
+				@include centre("both");
+			}
+			h1 {
+				align-self: flex-start;
+		        margin: 0 0 3px 25%;
+				padding: 10px 20px 10px 5px;
+				background: #f0f4f6;
+				font-family: "Myriad Pro";
+				font-size: 35px;
+				text-transform: uppercase;
+				color: #000;
+				opacity: 0.8;
+				@include breakpoint("mobile") {
+					font-size: 15px;
+					margin: 0 0 3px 15%;
+				}
+			}
+			h2 {
+				align-self: flex-start;
+				margin-left: 25%;
+				font-family: "Myriad Pro";
+				font-size: 35px;
+				text-transform: uppercase;
+				color: #000;
+				padding: 12px;
+				background: #f0f4f6;
+				opacity: 0.8;
+				@include breakpoint("mobile") {
+					font-size: 15px;
+					margin-left: 15%;
+				}
+			}
+		}
+	}
+}
+
+.features {
+	@include float-primary;
+	position: relative;
+	padding: 0 0 95px 10px;
+	background: #f7f7f7;
+	@include breakpoint(mobile) {
+		padding: 0 0 45px 10px;
+	}
+	.wrapper {
+		.box {
+			width: 33.333%;
+			float: left;
+			padding: 95px 0 0 0;
+			@include breakpoint("mobile") {
+				width: 100%;
+				padding: 50px 0 0 0;	
+			}
+			@include breakpoint("tablet") {
+				width: 50%;
+				padding: 45px 0 0 0;
+			}
+			.icon {
+				float: left;
+				.brush {
+					@include sprite-css(brush);
+				}
+				.lock {
+					@include sprite-css(lock);
+				}
+				.globus {
+					@include sprite-css(globus);
+				}
+				.cam {
+					@include sprite-css(cam);
+				}
+				.comp {
+					@include sprite-css(comp);
+				}
+				.list {
+					@include sprite-css(list);
+				}
+			}
+			.details {
+				width: 95%;
+				display: inline-block;
+				float: left;
+				padding: 0 0 0 15px;
+				h3 {
+					font-family: "Myriad Pro";
+					font-size: 22px;
+					color: #767676;
+					padding: 0 0 20px 0;
+				}
+				p {
+					font-family: Lato;
+					font-size: 15px;
+					color: #9e9e9e;
+					padding: 0 0 20px 0;
+				}
+				a {
+					text-decoration: none;
+					span {
+						font-family: Lato;
+						font-size: 15px;
+						color: #848484;
+						&:hover {
+							color: $hover-color;
+							transition: color 0.5s ease-out;
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+.main-slider {
+	@include float-primary;
+	position: relative;
+	margin: 96px 0 95px 0;
+	.wrapper {
+		h2 {
+			font-family: 'Lato', sans-serif;
+			font-size: 26px;
+			text-transform: uppercase;
+			text-align: center;
+			margin: 0 0 20px 0;
+			color: #4f4f4f;
+		}
+	}
+	.slides {
+		margin: 0 auto;
+		li {
+			.wrapper {
+				p {
+					font-family: 'Lato', sans-serif;
+					font-size: 20px;
+					text-align: center;
+					margin: 0 0 20px 0;
+					color: #8f8e8e;
+					line-height: 26px;					
+				}
+				a {
+					font-family: 'Lato', sans-serif;
+					font-size: 16px;
+					line-height: 32px;
+					display: block;
+					text-align: center;
+					margin: 0 0 20px 0;
+					text-decoration: none;
+					color: #696767;
+					span {						
+					}
+				}
+			}
+		}
+	}
+}
+
+.about {
+	@include float-primary;
+	position: relative;
+	margin: 35px 0 95px 0;
+	background: #fff;
+	.wrapper {
+		.column {
+			width: 50%;
+			float: left;
+			background-color: #3b3b3b;
+				@include breakpoint("tablet") {
+					width: 50%;
+				}
+				@include breakpoint("mobile") {
+					width: 100%;
+					text-align: center;
+					float: none;
+				}
+			img {
+				max-width: 100%;
+				height: 100%;
+				@include breakpoint("tablet") {
+					width: 100%;
+				}
+				@include breakpoint("mobile") {
+					max-width: 100%;
+				}
+			}
+			h2 {
+				font-family: Myriad Pro;
+				color: #fff;
+				font-size: 30px;
+				line-height: 40px;
+				font-weight: bold;
+				text-transform: capitalize;
+				padding: 10px 0 20px 10px;
+			}
+			p {
+				font-family: Myriad Pro;
+				color: #fff;
+				font-size: 16px;
+				line-height: 32px;
+				  padding: 0 5px 30px 10px;				
+			}
+			a {
+				text-decoration: none;
+				margin: 0 0 0 10px;
+				span {
+					color: #fff;
+					font-size: 16px;
+					line-height: 32px;
+					&:hover {
+						color: $hover-color;
+						transition: color 0.5s ease-out;
+					}					
+				}
+			}
+		}
+	}
+}
+
+.action {
+	@include float-primary;
+	position: relative;
+	margin: 0 0 95px 0;
+	.wrapper {
+		text-align: center;
+		h2 {
+			font-family: Lato;
+			font-size: 34px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #6b6b6b;
+			text-align: center;
+			padding: 0 0 25px 0;
+		}
+		p {
+			font-family: Lato;
+			font-size: 17px;
+			color: #7f7d7d;
+			text-align: center;
+			padding: 0 0 25px 0;
+		}
+		a {
+			font-family: Lato;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 1px;
+			background-color: #65bf95;
+			display: inline-block;
+			padding: 20px 60px;
+			&:hover {
+				opacity: 0.9;
+			}
+			@include breakpoint(mobile) {
+				display: block;
+				width: 98%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.flex-control-paging li a {
+	background: #bebebe;
+}
+
+.flex-control-paging li a.flex-active {
+	background: #dadada;
+}
+
+.contanct-container {
+	@include float-primary;
+	.wrapper {
+		h3 {
+			font-family: "Lato";
+			font-size: 30px;
+		}
+		p {
+			-webkit-column-count: 2;			
+		}
+	}
+}
+
+

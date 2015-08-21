@@ -1,0 +1,31 @@
+/* ----------------- footer
+----------------------------------------------------------------------- */
+
+.footer {
+	@include float-primary;
+	position: relative;
+	background-color: #f7f7f7;
+	padding: 45px 0 45px 0;
+	.wrapper {
+		.footer-logo {
+			text-align: center;
+			padding: 20px 0;
+			img {
+				display: inline-block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		p {
+			text-align: center;
+			padding: 20px 0;
+			font-size: 14px;
+			line-height: 20px;
+			font-family: Myriad Pro;
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
