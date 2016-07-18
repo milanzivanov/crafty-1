@@ -462,7 +462,7 @@ table {
   margin: 0 0 3px 25%;
   padding: 10px 20px 10px 5px;
   background: #f0f4f6;
-  font-family: "Myriad Pro";
+  font-family: "Lato";
   font-size: 35px;
   text-transform: uppercase;
   color: #000;
@@ -477,7 +477,7 @@ table {
 .banner .wrapper .text-slider h2 {
   align-self: flex-start;
   margin-left: 25%;
-  font-family: "Myriad Pro";
+  font-family: "Lato";
   font-size: 35px;
   text-transform: uppercase;
   color: #000;
