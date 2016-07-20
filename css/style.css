@@ -666,7 +666,7 @@ table {
   }
 }
 .about .wrapper .column h2 {
-  font-family: Myriad Pro;
+  font-family: 'Lato', sans-serif;
   color: #fff;
   font-size: 30px;
   line-height: 40px;
@@ -675,7 +675,7 @@ table {
   padding: 10px 0 20px 10px;
 }
 .about .wrapper .column p {
-  font-family: Myriad Pro;
+ font-family: 'Lato', sans-serif;
   color: #fff;
   font-size: 16px;
   line-height: 32px;
@@ -705,7 +705,7 @@ table {
   text-align: center;
 }
 .action .wrapper h2 {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-size: 34px;
   font-weight: bold;
   text-transform: uppercase;
@@ -714,14 +714,14 @@ table {
   padding: 0 0 25px 0;
 }
 .action .wrapper p {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-size: 17px;
   color: #7f7d7d;
   text-align: center;
   padding: 0 0 25px 0;
 }
 .action .wrapper a {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   color: #fff;
@@ -755,7 +755,7 @@ table {
   float: left;
 }
 .contanct-container .wrapper h3 {
-  font-family: "Lato";
+  font-family: 'Lato', sans-serif;
   font-size: 30px;
 }
 .contanct-container .wrapper p {
