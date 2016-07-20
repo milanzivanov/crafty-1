@@ -567,13 +567,13 @@ table {
   padding: 0 0 0 15px;
 }
 .features .wrapper .box .details h3 {
-  font-family: "Myriad Pro";
+  font-family: "Lato";
   font-size: 22px;
   color: #767676;
   padding: 0 0 20px 0;
 }
 .features .wrapper .box .details p {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-size: 15px;
   color: #9e9e9e;
   padding: 0 0 20px 0;
@@ -582,7 +582,7 @@ table {
   text-decoration: none;
 }
 .features .wrapper .box .details a span {
-  font-family: Lato;
+  font-family: 'Lato', sans-serif;
   font-size: 15px;
   color: #848484;
 }
